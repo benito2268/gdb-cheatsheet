@@ -41,5 +41,5 @@ Most GDB commands are simmilar to buttons you may have seen in other debuggers. 
 | step | s | advance to the next line while paused (step into) |
 | next | n | advance to the next line while paused - skipping function calls (step over) |
 | continue | c | resume the program after a breakpoint |
-| finish | f | resume the program, run until the end of the current function, then pause again |
+| finish |  | resume the program, run until the end of the current function, then pause again |
 | quit | q | exit GDB |
