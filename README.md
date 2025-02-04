@@ -34,7 +34,7 @@ This will show you the line number the segfault happened on.
 Most GDB commands are simmilar to buttons you may have seen in other debuggers. Most also have single-letter shorthand aliases, which are listen below.
 
 | Command | Shorthand | Function |
-----------------------------------
+----------|-----------|-----------
 | run     | r         | run the currently loaded program |
 | break <line> | b <line> | set a break point at a line |
 | break <function-name> | b <function-name> | set a breakpoint at the beginning of a function |
