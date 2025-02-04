@@ -13,4 +13,6 @@ Load a program in GDB:
 With a program loaded in GDB type ```run```. You should see a message like ```Program recieved signal SIGSEGV, Segmentation fault. ... at my_file.c:2```
 This will show you the line number the segfault happened on.
 
-<pre> ```python def hello_world(): print("Hello, world!") hello_world() ``` </pre>
+```python
+  print()
+```
