@@ -30,12 +30,13 @@ With a program loaded in GDB type ```run```. You should see a message like ```Pr
 This will show you the line number the segfault happened on.
 
 
-# Common GDB commands
+## Common GDB commands
 Most GDB commands are simmilar to buttons you may have seen in other debuggers. Most also have single-letter shorthand aliases, which are listen below.
 
 | Command | Shorthand | Function |
 ----------|-----------|-----------
 | run     | r         | run the currently loaded program |
+| print \<c-expr\> | p \<c-expr\> | print the value of a variable, result of a calculation, or any C expression |
 | break \<line\> | b \<line\> | set a break point at a line |
 | break \<function-name\> | b \<function-name\> | set a breakpoint at the beginning of a function |
 | step | s | advance to the next line while paused (step into) |
@@ -43,3 +44,13 @@ Most GDB commands are simmilar to buttons you may have seen in other debuggers. 
 | continue | c | resume the program after a breakpoint |
 | finish |  | resume the program, run until the end of the current function, then pause again |
 | quit | q | exit GDB |
+
+## The ```x/nfu``` Command
+One of the most powerful (and confusing :P) commands in GDB is ```x/nfu <address>```, which allows you to inspect the contents of memory at a given address.
+When typing the command the ```nfu``` part is replaced with 3 parameters summarized below.
+* n (number) - the number of things to print - any integer value
+* f (format) - the numeric base to print in - 'x' for hexadeciaml, 'd' for decimal, 'u' for unsigned, 't' for binary.
+* u (unit) - what is the "thing" we mentioned above? - 'b' for byte (8 bits), 'h' for halfword (16 bits), 'w' for word (32 bits), 'g' for giantword (64 bits)
+
+The following example would print 4 bytes, in hexadeciaml, starting at memory address 0x1234, when typed in the GDB console.
+```x/4xb 0x1234```
