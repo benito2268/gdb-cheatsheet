@@ -9,9 +9,20 @@ A modified GCC compile command for 354:
 gcc -Wall -m32 -std=gnu99 -g my_c_file -o my_prog
 ```
 
-
 Load a program in GDB: 
-<pre>```gdb my_prog```</pre>
+```bash
+gdb my_prog
+```
+
+GDB also has a text-based user interface (TUI). It shows your source code and the GDB command console side by side. You can enable it by typing:
+```
+layout src
+```
+in the GDB console. If you would like this to be the default run:
+```bash
+echo "layout src" >> ~/.gdbinit
+```
+from the terminal while SSH'd into a CSL machine.
 
 ## Locate a Segfault
 With a program loaded in GDB type ```run```. You should see a message like ```Program recieved signal SIGSEGV, Segmentation fault. ... at my_file.c:2```
