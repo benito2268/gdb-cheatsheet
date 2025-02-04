@@ -1,5 +1,5 @@
 ## Passing Command-line args
-With a file loaded in GDB, use ```run <args>``` to pass CLAs
+With a file loaded in GDB, use ```run <args>``` to pass CLAs. For example ```run hello 5 world```
 
 ## The ```x/nfu``` Command
 One of the most powerful (and confusing :P) commands in GDB is ```x/nfu <address>```, which allows you to inspect the contents of memory at a given address.
