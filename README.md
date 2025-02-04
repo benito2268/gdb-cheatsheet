@@ -36,5 +36,5 @@ Most GDB commands are simmilar to buttons you may have seen in other debuggers. 
 | Command | Shorthand | Function |
 ----------|-----------|-----------
 | run     | r         | run the currently loaded program |
-| break <line> | b <line> | set a break point at a line |
+| break line | b <line> | set a break point at a line |
 | break <function-name> | b <function-name> | set a breakpoint at the beginning of a function |
