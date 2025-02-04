@@ -3,26 +3,27 @@ GDB is a program debugger for debugging executable files (usually compiled from 
 This guide contians a few basic commands and tips on how to use GDB.
 
 ## Basics
-GDB makes use of extra information the compiler can include in your executable file using the ```-g``` flag
-A modified GCC compile command for 354:
+GDB makes use of extra information the compiler can include in your executable file using the ```-g``` flag.
+
+Compile your C code with:
 ```bash
 gcc -Wall -m32 -std=gnu99 -g my_c_file -o my_prog
 ```
 
-Load a program in GDB: 
+Load the program in GDB: 
 ```bash
 gdb my_prog
 ```
 
-GDB also has a text-based user interface (TUI). It shows your source code and the GDB command console side by side. You can enable it by typing:
+GDB also has a text-based user interface (TUI). It shows your source code and the GDB command console side by side. To enable it, type this (in the GDB console!):
 ```
 layout src
 ```
-in the GDB console. If you would like this to be the default run:
+
+If you would like this to be the default every time you run GDB type this in the linux terminal of a CSL machine:
 ```bash
 echo "layout src" >> ~/.gdbinit
 ```
-from the terminal while SSH'd into a CSL machine.
 
 ## Locate a Segfault
 With a program loaded in GDB type ```run```. You should see a message like ```Program recieved signal SIGSEGV, Segmentation fault. ... at my_file.c:2```
