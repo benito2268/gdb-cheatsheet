@@ -4,7 +4,7 @@ This guide contians a few basic commands and tips on how to use GDB.
 
 ## Basics
 GDB makes use of extra information the compiler can include in your executable file using the ```-g``` flag
-A modified GCC compile command for 354: ```gcc -m32 -Wall -std=gnu99 my_file.c -g -o my_prog```
+A modified GCC compile command for 354: <pre> ```bash gcc -m32 -Wall -std=gnu99 my_file.c -g -o my_prog``` </pre>
 Load a program in GDB: ```gdb my_prog```
 
 ## Locate a Segfault
