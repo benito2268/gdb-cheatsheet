@@ -38,3 +38,8 @@ Most GDB commands are simmilar to buttons you may have seen in other debuggers. 
 | run     | r         | run the currently loaded program |
 | break \<line\> | b \<line\> | set a break point at a line |
 | break \<function-name\> | b \<function-name\> | set a breakpoint at the beginning of a function |
+| step | s | advance to the next line while paused (step into) |
+| next | n | advance to the next line while paused - skipping function calls (step over) |
+| continue | c | resume the program after a breakpoint |
+| finish | f | resume the program, run until the end of the current function, then pause again |
+| quit | q | exit GDB |
