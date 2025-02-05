@@ -7,7 +7,7 @@ GDB makes use of extra information the compiler can include in your executable f
 
 Compile your C code with:
 ```bash
-gcc -Wall -m32 -std=gnu99 -g my_c_file -o my_prog
+gcc -Wall -m32 -std=gnu99 -g my_c_file.c -o my_prog
 ```
 
 Load the program in GDB: 
