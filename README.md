@@ -49,5 +49,6 @@ Most GDB commands are simmilar to buttons you may have seen in other debuggers. 
 * ```print my_int```
 * ```print my_int + 5 / 2 + 3```
 * ``` print foo() ```
+* ``` print *arr@10 ``` prints the first 10 elements of a heap array pointed to by arr
 * ``` print *my_ptr```
 * ``` print my_list[5] ``` 
